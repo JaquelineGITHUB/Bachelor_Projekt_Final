@@ -22,6 +22,6 @@ Folgende Dateien müssen nach der WordPress Installation ersetzt bzw. hinzugefü
     * Uploads
    
   * Die Dateien gehören in in den **"WP-Content/themes"** Ordner:
-    * virtue 3.1.0
+    * virtue 
     * virtue-child
     
