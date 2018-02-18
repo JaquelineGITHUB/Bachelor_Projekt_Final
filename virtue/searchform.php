@@ -3,5 +3,10 @@
 		<span class="screen-reader-text"><?php esc_html_e( 'Search for:', 'virtue' ); ?></span>
 		<input type="text" value="<?php if ( is_search() ) { echo esc_attr( get_search_query() ); } ?>" name="s" class="search-query" placeholder="<?php esc_html_e( 'Search', 'virtue' ); ?>">
 	</label>
-	<button type="submit" class="search-icon"><i class="icon-search"></i></button>
+	<button type="submit" class="search-icon" role="button" aria-label="Submit">
+        
+    <span class="screen-reader-text" role="alertdialog" aria-labelledby="submit">Starte Suche</span>
+        <i class="icon-search"></i>
+        
+    </button>
 </form>

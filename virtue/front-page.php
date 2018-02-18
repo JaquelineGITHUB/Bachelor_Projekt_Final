@@ -77,13 +77,15 @@
 					    	case 'block_one':
 
 							   	if( $show_pagetitle == false ) { ?>
-									<div id="homeheader" class="welcomeclass">
+								
+                    <div id="homeheader" class="welcomeclass">
 										<div class="page-header">
 											<h1 class="entry-title" itemprop="name">
 												<?php echo esc_html( virtue_title() ); ?>
 											</h1>
 										</div>
 									</div><!--welcomeclass-->
+                    
 								<?php }
 
 							break;

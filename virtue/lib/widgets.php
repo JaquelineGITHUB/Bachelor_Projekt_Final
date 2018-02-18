@@ -36,8 +36,8 @@ function virtue_register_sidebar($name, $id){
     'id' => $id,
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget' => '</div></section>',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
   ));
 }
 add_action('widgets_init', 'virtue_register_sidebars');
@@ -60,8 +60,8 @@ function kadence_widgets_init() {
     'id'            => 'sidebar-primary',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
   ));
   // Footer
   global $virtue; if(isset($virtue['footer_layout'])) { $footer_layout = $virtue['footer_layout'];} else {$footer_layout = "twoc";}
@@ -206,7 +206,7 @@ class Kadence_Contact_Widget extends WP_Widget {
   ?>
     <div class="vcard">
       
-      <?php if(!empty($instance['company'])):?><h5 class="vcard-company"><i class="icon-building"></i><?php echo $instance['company']; ?></h5><?php endif;?>
+      <?php if(!empty($instance['company'])):?><p class="vcard-company"><i class="icon-building"></i><?php echo $instance['company']; ?></p><?php endif;?>
       <?php if(!empty($instance['name'])):?><p class="vcard-name fn"><i class="icon-user"></i><?php echo $instance['name']; ?></p><?php endif;?>
       <?php if(!empty($instance['street_address']) || !empty($instance['locality']) || !empty($instance['region']) ):?>
         <p class="vcard-address"><i class="icon-map-marker"></i><?php echo $instance['street_address']; ?>
@@ -334,14 +334,14 @@ class Kadence_Social_Widget extends WP_Widget {
   ?>
     <div class="virtue_social_widget clearfix">
       
-<?php if(!empty($instance['facebook'])):?><a href="<?php echo esc_url($instance['facebook']); ?>" class="facebook_link" title="Facebook" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="icon-facebook"></i></a><?php endif;?>
-<?php if(!empty($instance['twitter'])):?><a href="<?php echo esc_url($instance['twitter']); ?>" class="twitter_link" title="Twitter" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="icon-twitter"></i></a><?php endif;?>
-<?php if(!empty($instance['instagram'])):?><a href="<?php echo esc_url($instance['instagram']); ?>" class="instagram_link" title="Instagram" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Instagram"><i class="icon-instagram"></i></a><?php endif;?>
-<?php if(!empty($instance['googleplus'])):?><a href="<?php echo esc_url($instance['googleplus']); ?>" class="googleplus_link" title="GooglePlus" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="GooglePlus"><i class="icon-google-plus"></i></a><?php endif;?>
-<?php if(!empty($instance['flickr'])):?><a href="<?php echo esc_url($instance['flickr']); ?>" class="flickr_link" title="Flickr" data-toggle="tooltip" target="_blank" data-placement="top" data-original-title="Flickr"><i class="icon-flickr"></i></a><?php endif;?>
-<?php if(!empty($instance['vimeo'])):?><a href="<?php echo esc_url($instance['vimeo']); ?>" class="vimeo_link" title="Vimeo" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Vimeo"><i class="icon-vimeo"></i></a><?php endif;?>
-<?php if(!empty($instance['youtube'])):?><a href="<?php echo esc_url($instance['youtube']); ?>" class="youtube_link" title="YouTube" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="YouTube"><i class="icon-youtube"></i></a><?php endif;?>
-<?php if(!empty($instance['pinterest'])):?><a href="<?php echo esc_url($instance['pinterest']); ?>" class="pinterest_link" title="Pinterest" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Pinterest"><i class="icon-pinterest"></i></a><?php endif;?>
+<?php if(!empty($instance['facebook'])):?><a href="<?php echo esc_url($instance['facebook']); ?>" class="facebook_link" title="Facebook" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><span class="screen-reader-text" role="alertdialog" aria-labelledby="Facebook" >Facebook</span><i class="icon-facebook" ></i></a><?php endif;?>
+<?php if(!empty($instance['twitter'])):?><a href="<?php echo esc_url($instance['twitter']); ?>" class="twitter_link" title="Twitter" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><span class="screen-reader-text" role="alertdialog" aria-labelledby="Twitter">Twitter</span><i class="icon-twitter"></i></a><?php endif;?>
+<?php if(!empty($instance['instagram'])):?><a href="<?php echo esc_url($instance['instagram']); ?>" class="instagram_link" title="Instagram" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Instagram"><span class="screen-reader-text" role="alertdialog" aria-labelledby="Instagram">Instagram</span><i class="icon-instagram"></i></a><?php endif;?>
+<?php if(!empty($instance['googleplus'])):?><a href="<?php echo esc_url($instance['googleplus']); ?>" class="googleplus_link" title="GooglePlus" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="GooglePlus"><span class="screen-reader-text" role="alertdialog" aria-labelledby="GooglePlus">GooglePlus</span><i class="icon-google-plus"></i></a><?php endif;?>
+<?php if(!empty($instance['flickr'])):?><a href="<?php echo esc_url($instance['flickr']); ?>" class="flickr_link" title="Flickr" data-toggle="tooltip" target="_blank" data-placement="top" data-original-title="Flickr"><span class="screen-reader-text" role="alertdialog" aria-labelledby="Flickr">Flickr</span><i class="icon-flickr"></i></a><?php endif;?>
+<?php if(!empty($instance['vimeo'])):?><a href="<?php echo esc_url($instance['vimeo']); ?>" class="vimeo_link" title="Vimeo" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Vimeo"><span class="screen-reader-text" role="alertdialog" aria-labelledby="Vimeo">Vimeo</span><i class="icon-vimeo"></i></a><?php endif;?>
+<?php if(!empty($instance['youtube'])):?><a href="<?php echo esc_url($instance['youtube']); ?>" class="youtube_link" title="YouTube" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="YouTube"><span class="screen-reader-text" role="alertdialog" aria-labelledby="YouTube">YouTube</span><i class="icon-youtube"></i></a><?php endif;?>
+<?php if(!empty($instance['pinterest'])):?><a href="<?php echo esc_url($instance['pinterest']); ?>" class="pinterest_link" title="Pinterest" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Pinterest"><span class="screen-reader-text" role="alertdialog" aria-labelledby="Pinterest">Pinterest</span><i class="icon-pinterest"></i></a><?php endif;?>
 <?php if(!empty($instance['dribbble'])):?><a href="<?php echo esc_url($instance['dribbble']); ?>" class="dribbble_link" title="Dribbble" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Dribbble"><i class="icon-dribbble"></i></a><?php endif;?>
 <?php if(!empty($instance['linkedin'])):?><a href="<?php echo esc_url($instance['linkedin']); ?>" class="linkedin_link" title="LinkedIn" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="LinkedIn"><i class="icon-linkedin"></i></a><?php endif;?>
 <?php if(!empty($instance['tumblr'])):?><a href="<?php echo esc_url($instance['tumblr']); ?>" class="tumblr_link" title="Tumblr" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Tumblr"><i class="icon-tumblr"></i></a><?php endif;?>

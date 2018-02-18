@@ -82,7 +82,49 @@ h4.sow-cta-title {
 /****** Footer Ende ******/
 
 p {
-	font-size: 1.4rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: justify;
 }
 
+.footerclass {
+    background: #42507A;
+}
 
+#containerfooter h3, #containerfooter {
+    color: #fff;
+}
+
+.footerclass a {
+    color: #fff;
+}
+
+.page-header {
+    display: unset;
+}
+
+h5.vcard-company {
+    color: #fff;
+}
+
+#topcontrol>div {
+	background:#005;
+}
+
+.footercredits p {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+#topcontrol>div:hover {
+    background: #58658C;
+}
+
+h4 { 
+    font-size: 3.0rem;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.5;
+}
